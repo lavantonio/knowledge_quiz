@@ -1,0 +1,75 @@
+/* * * * * * * * * * * * * * * * * Global * * * * * * * * * * * * * * * * */
+*{
+  margin: 0;
+  padding: 0;
+}
+.displayNone{
+  display: none;
+}
+/* * * * * * * * * * * * * * * * * ChoosePlayer * * * * * * * * * * * * * * * * */
+.playerBtn{
+  width: 300px;
+  margin: 100px auto;
+  box-shadow: 0 0 3px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 35px;
+}
+/* * * * * * * * * * * * * * * * * Quiz * * * * * * * * * * * * * * * * */
+.options{
+  justify-content: center;
+}
+.quiz{
+  width: 600px;
+  height: 500px;
+  margin: 50px 0;
+  box-shadow: 0 0 8px;
+  padding: 0;
+}
+header{
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.option{
+  width: 200px;
+  height: 120px;
+  margin: 50px;
+  box-shadow: 0 0 3px;
+  float: left;
+  font-size: 28px;
+}
+.option:hover{
+  cursor: pointer;
+  background-color: azure;
+}
+.optionP{
+  height: 100%;
+  display: block;
+}
+/* * * * * * * * * * * * * * * * * Button Player * * * * * * * * * * * * * * * * */
+.player{
+  margin: 50px 0;
+  box-shadow: 0 0 8px;
+}
+/* * * * * * * * * * * * * * * * * addPlayer * * * * * * * * * * * * * * * * */
+.addPlayer h1{
+  margin-top: 50px;
+}
+.addPlayer img{
+  height: 200px;
+  object-fit: cover;
+}
+.backgroundBlack {
+  background-color: black;
+  opacity: 0.8;
+}
+.addPlayer .card{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 15px 10px;
+}
+.addPlayer .card-text{
+  height: 72px;
+}
