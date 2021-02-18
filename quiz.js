@@ -60,14 +60,41 @@ class Quiz{
     }
     return rand
   }
-  userAnswer(answer){
-    if(answer == this.getQuestion().answer){
-    this.score += this.getQuestion().points;
+  userAnswerGeography(answer){
+    if(answer == this.getQuestionGeography().answer){
+    this.score += this.getQuestionGeography().points;
     }
     this.index++;
   }
+  userAnswerHistory(answer){
+    if(answer == this.getQuestionHistory().answer){
+    this.score += this.getQuestionHistory().points;
+    }
+    this.index++;
+  }
+  userAnswerMathematics(answer){
+    if(answer == this.getQuestionMathematics().answer){
+    this.score += this.getQuestionMathematics().points;
+    }
+    this.index++;
+  }
+  userAnswerTheGeneralEducation(answer){
+    if(answer == this.getQuestionTheGeneralEducation().answer){
+    this.score += this.getQuestionTheGeneralEducation().points;
+    }
+    this.index++;
+
+  }
   end(){
-    return this.index === this.questions.length;
+    if ('Geografija' == area) {
+        return this.index === this.questionsGeography.length;
+      }else if('Istorija' == area){
+        return this.index === this.questionsHistory.length;
+      }else if('Matematika' == area){
+        return this.index === this.questionsMathematics.length;
+      }else{
+        return this.index === this.questionsTheGeneralEducation.length;
+    }
   }
 }
 
