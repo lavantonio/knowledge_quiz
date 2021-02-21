@@ -7,6 +7,7 @@ class Quiz{
     this.questionsTheGeneralEducation = questionsTheGeneralEducation;
     this.index = 0;
     this.score = 0;
+    this.questionNumber = 1;
   }
   getQuestionGeography(){
     return this.questionsGeography[this.index];
@@ -65,25 +66,28 @@ class Quiz{
     this.score += this.getQuestionGeography().points;
     }
     this.index++;
+    this.questionNumber++;
   }
   userAnswerHistory(answer){
     if(answer == this.getQuestionHistory().answer){
     this.score += this.getQuestionHistory().points;
     }
     this.index++;
+    this.questionNumber++;
   }
   userAnswerMathematics(answer){
     if(answer == this.getQuestionMathematics().answer){
     this.score += this.getQuestionMathematics().points;
     }
     this.index++;
+    this.questionNumber++;
   }
   userAnswerTheGeneralEducation(answer){
     if(answer == this.getQuestionTheGeneralEducation().answer){
     this.score += this.getQuestionTheGeneralEducation().points;
     }
     this.index++;
-
+    this.questionNumber++;
   }
   end(){
     if ('Geografija' == area) {

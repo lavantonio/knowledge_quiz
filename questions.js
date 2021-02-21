@@ -12,9 +12,9 @@ class Question{
 const questionsGeography = [
   new Question("Glavni grad Srbije je?", ['Zagreb', 'Sarajevo','Nis','Beograd'], 'Beograd', 5, 'Geografija'),
   new Question('Glavni grad Hrvatske je?', ['Zagreb', 'Sarajevo','Nis','Beograd'], 'Zagreb', 5, 'Geografija'),
-  new Question('Glavni grad Bolivije je?', ['Zagreb', 'Sukre','Nis','Beograd'], 'Sukre', 5, 'Geografija'),
+  new Question('Glavni grad Bolivije je?', ['La Paz', 'Sukre','Nis','Beograd'], 'Sukre', 5, 'Geografija'),
   new Question('Glavni grad Bugarske je?', ['Zagreb', 'Sofija','Nis','Beograd'], 'Sofija', 5, 'Geografija'),
-  new Question('Glavni grad Madjarske je?', ['Zagreb', 'Sarajevo','Nis','Budanpest'], 'Budanpest', 5, 'Geografija')
+  new Question('Glavni grad Madjarske je?', ['Zagreb', 'Sarajevo','Nis','Budimpesta'], 'Budimpesta', 5, 'Geografija')
 ];
 
 const questionsHistory = [
@@ -30,7 +30,7 @@ const questionsMathematics = [
   new Question('Svaki štap ima dva kraja. Koliko krajeva ima štap i po?', ['2 kraja', '3 kraja','4 kraja','1 kraj'], '4 kraja', 5, 'Matematika'),
   new Question('Svaka od tri sestre ima brata. Koliko u toj porodici ima dece?', ['3 dece', '2 dece','4 dece','5 dece'], '4 dece', 5, 'Matematika'),
   new Question('Kada je pešak prešao polovinu puta i još 2 km, ostalo muje da pređe još četvrtinu puta i 6 km. Koliko je dužina puta?', ['16 km', '18 km','32 km','34 km'], '32 km', 5, 'Matematika'),
-  new Question('Jedan radnik može završiti posao za 4 sata, a drugi za 12 sati. Za koje vreme bi obavili taj posao radeći zajedno?', ['2 sata', '3 sata','4 sata','pola sata'], 'pola sata', 5, 'Matematika')
+  new Question('Jedan radnik može završiti posao za 4 sata, a drugi za 12 sati. Za koje vreme bi obavili taj posao radeći zajedno?', ['2 sata', '3 sata','4 sata','pola sata'], 'za tri sata', 5, 'Matematika')
 ];
 
 const questionsTheGeneralEducation = [

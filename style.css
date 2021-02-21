@@ -21,16 +21,17 @@
 }
 .quiz{
   width: 600px;
-  height: 500px;
+  height: 540px;
   margin: 50px 0;
   box-shadow: 0 0 8px;
   padding: 0;
 }
 header{
-  height: 60px;
+  height: 100px;
   line-height: 60px;
   border-bottom: 1px solid #ddd;
   text-align: center;
+  display: flex;
 }
 .option{
   width: 200px;
@@ -72,4 +73,25 @@ header{
 }
 .addPlayer .card-text{
   height: 72px;
+}
+/* * * * * * * * * * * * * * * * * Player Left * * * * * * * * * * * * * * * * */
+.player{
+  padding: 30px 50px;
+}
+.player img{
+ height: 150px;
+ object-fit: cover;
+ width: 75%;
+}
+.player h2{
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+#scorePlayer, #countRounds{
+  font-weight: 450;
+  font-size: 1.5rem;
+}
+#playerBtn{
+  font-weight: 300;
+  font-size: 1.3rem;
 }
