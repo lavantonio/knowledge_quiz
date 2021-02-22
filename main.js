@@ -17,6 +17,7 @@ let playersBtnArray = [];
 let playerGame;
 let area;
 let playerBtnText;
+let counter = 1;
 
 function start(){
   myH1.innerHTML = startGame[0].text;
@@ -83,15 +84,29 @@ function run(){
     optionsP[i].innerHTML = rand[i];
     optionsP[i].onclick = function(){
       if ('Geografija' == area) {
-          quiz.userAnswerGeography(this.innerHTML);
+        if (counter == 1) {
+            quiz.userAnswerGeography(this.innerHTML);
+            counter++;
+            console.log(this);
+        }
         }else if('Istorija' == area){
-          quiz.userAnswerHistory(this.innerHTML);
+          if (counter == 1) {
+            quiz.userAnswerHistory(this.innerHTML);
+            counter++;
+        }
         }else if('Matematika' == area){
-          quiz.userAnswerMathematics(this.innerHTML);
+          if (counte == 1) {
+            quiz.userAnswerMathematics(this.innerHTML);
+            counter++;
+          }
         }else{
-          quiz.userAnswerTheGeneralEducation(this.innerHTML);
+          if (counte == 1) {
+            quiz.userAnswerTheGeneralEducation(this.innerHTML);
+            counter++;
+          }
         }
       }
+          counter = 1;
           playerBtnText.addEventListener('click',run);
     }
     }else{
