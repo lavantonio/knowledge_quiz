@@ -41,6 +41,12 @@ header{
   float: left;
   font-size: 28px;
 }
+.displayBorderBlue{
+  border: 3px solid blue;
+}
+.displayBorderRed{
+  border: 3px solid red;
+}
 .option:hover{
   cursor: pointer;
   background-color: azure;

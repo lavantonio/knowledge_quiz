@@ -82,12 +82,15 @@ function run(){
     playerBtnText = document.querySelector('#playerBtn');
     for (let i = 0; i < 4; i++) {
     optionsP[i].innerHTML = rand[i];
+    optionsP[i].classList.remove('displayBorderRed');
+    optionsP[i].classList.remove('displayBorderBlue');
+    console.log(optionsP[i]);
     optionsP[i].onclick = function(){
       if ('Geografija' == area) {
         if (counter == 1) {
             quiz.userAnswerGeography(this.innerHTML);
             counter++;
-            console.log(this);
+            quiz.correctAnswer(this.innerHTML, this);
         }
         }else if('Istorija' == area){
           if (counter == 1) {

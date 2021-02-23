@@ -89,6 +89,14 @@ class Quiz{
     this.index++;
     this.questionNumber++;
   }
+  correctAnswer(answer, thisElement){
+    console.log(thisElement);
+    thisElement.classList.add('displayBorderRed');
+    if (this.questionsGeography[this.index-1].answer == answer) {
+      thisElement.classList.add('displayBorderBlue');
+      thisElement.classList.remove('displayBorderRed');
+    }
+  }
   end(){
     if ('Geografija' == area) {
         return this.index === this.questionsGeography.length;
