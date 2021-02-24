@@ -84,28 +84,30 @@ function run(){
     optionsP[i].innerHTML = rand[i];
     optionsP[i].classList.remove('displayBorderRed');
     optionsP[i].classList.remove('displayBorderBlue');
-    console.log(optionsP[i]);
     optionsP[i].onclick = function(){
       if ('Geografija' == area) {
         if (counter == 1) {
             quiz.userAnswerGeography(this.innerHTML);
             counter++;
-            quiz.correctAnswer(this.innerHTML, this);
+            quiz.correctAnswerG(this.innerHTML, this);
         }
         }else if('Istorija' == area){
           if (counter == 1) {
             quiz.userAnswerHistory(this.innerHTML);
             counter++;
+            quiz.correctAnswerHistory(this.innerHTML, this);
         }
         }else if('Matematika' == area){
-          if (counte == 1) {
+          if (counter == 1) {
             quiz.userAnswerMathematics(this.innerHTML);
             counter++;
+            quiz.correctAnswerMathematics(this.innerHTML, this);
           }
         }else{
-          if (counte == 1) {
+          if (counter == 1) {
             quiz.userAnswerTheGeneralEducation(this.innerHTML);
             counter++;
+            quiz.correctAnswerTheGeneralEducation(this.innerHTML, this);
           }
         }
       }

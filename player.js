@@ -23,7 +23,7 @@ class Player{
   }
 }
 const player= [
-  new Player(`ivo`,`Ivo`, `Ivu`,`Ako mene izaberete necete se pokajati. Gledajte me u oci dok pricam.`, `primary`),
+  new Player(`ivo`,`Ivo`, `Iva`,`Ako mene izaberete necete se pokajati. Gledajte me u oci dok pricam.`, `primary`),
   new Player(`horhe`,`Horhe`, `Horhea`,`Posle 30 godina igranja nisam najpametniji ali sam najbolji.`, `warning`),
   new Player(`kristina`,`Kristina`, `Kristinu`,`Volim da igram kvizove znanja a najvise volim da pobedjujem.`, `success`),
   new Player(`lav`,`Lav`, `Lava`,`Veni, vidi vici ili pametan pametniji najpametniji.`, `secondary`),
