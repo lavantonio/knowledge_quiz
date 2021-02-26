@@ -95,51 +95,59 @@ class Quiz{
       thisElement.classList.add('displayBorderBlue');
       thisElement.classList.remove('displayBorderRed');
         }
+    setTimeout(function (){
     for (var i = 0; i < optionsP.length; i++) {
-      if (optionsP[i].innerHTML == this.questionsGeography[this.index-1].answer) {
+      if (optionsP[i].innerHTML == quiz.questionsGeography[quiz.index-1].answer) {
         optionsP[i].classList.add('displayBorderBlue');
       }
-    myH1.innerHTML = `Tacan odgovor je ${this.questionsGeography[this.index-1].answer}`;
     }
+  },1000)
+    myH1.innerHTML = `Tacan odgovor je ${this.questionsGeography[this.index-1].answer}`;
   }
   correctAnswerHistory(answer, thisElement){
     thisElement.classList.add('displayBorderRed');
     if (this.questionsHistory[this.index-1].answer == answer) {
       thisElement.classList.add('displayBorderBlue');
       thisElement.classList.remove('displayBorderRed');
-        }
-    for (var i = 0; i < optionsP.length; i++) {
-      if (optionsP[i].innerHTML == this.questionsHistory[this.index-1].answer) {
-        optionsP[i].classList.add('displayBorderBlue');
       }
+      setTimeout(function (){
+      for (var i = 0; i < optionsP.length; i++) {
+        if (optionsP[i].innerHTML == quiz.questionsHistory[quiz.index-1].answer) {
+          optionsP[i].classList.add('displayBorderBlue');
+        }
+      }
+    },1000)
     myH1.innerHTML = `Tacan odgovor je ${this.questionsHistory[this.index-1].answer}`;
-    }
   }
   correctAnswerMathematics(answer, thisElement){
     thisElement.classList.add('displayBorderRed');
     if (this.questionsMathematics[this.index-1].answer == answer) {
       thisElement.classList.add('displayBorderBlue');
       thisElement.classList.remove('displayBorderRed');
-        }
-    for (var i = 0; i < optionsP.length; i++) {
-      if (optionsP[i].innerHTML == this.questionsMathematics[this.index-1].answer) {
-        optionsP[i].classList.add('displayBorderBlue');
       }
+      setTimeout(function (){
+      for (var i = 0; i < optionsP.length; i++) {
+        if (optionsP[i].innerHTML == quiz.questionsMathematics[quiz.index-1].answer) {
+          optionsP[i].classList.add('displayBorderBlue');
+        }
+      }
+    },1000)
     myH1.innerHTML = `Tacan odgovor je ${this.questionsMathematics[this.index-1].answer}`;
-    }
   }
   correctAnswerTheGeneralEducation(answer, thisElement){
     thisElement.classList.add('displayBorderRed');
     if (this.questionsTheGeneralEducation[this.index-1].answer == answer) {
       thisElement.classList.add('displayBorderBlue');
       thisElement.classList.remove('displayBorderRed');
-        }
-    for (var i = 0; i < optionsP.length; i++) {
-      if (optionsP[i].innerHTML == this.questionsTheGeneralEducation[this.index-1].answer) {
-        optionsP[i].classList.add('displayBorderBlue');
       }
+      setTimeout(function (){
+      for (var i = 0; i < optionsP.length; i++) {
+        if (optionsP[i].innerHTML == quiz.questionsTheGeneralEducation[quiz.index-1].answer) {
+          optionsP[i].classList.add('displayBorderBlue');
+        }
+      }
+    },1000)
     myH1.innerHTML = `Tacan odgovor je ${this.questionsTheGeneralEducation[this.index-1].answer}`;
-    }
   }
   end(){
     if ('Geografija' == area) {

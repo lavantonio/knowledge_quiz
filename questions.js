@@ -37,6 +37,6 @@ const questionsTheGeneralEducation = [
   new Question("Velika Černobiljska katastrofa u Ukrajini izazvana je:", ['zemljotresom', 'padom aviona','kvarom u nuklearnoj elektrani','sirenjem otrovnog gasa'], 'kvarom u nuklearnoj elektrani', 5, 'Opste obrazovanje'),
   new Question('Kako se zove aktuelni predsednik Turske?', ['Mustafa Kemal Ataturk', 'Melih Mahmutoglu','Redžep Tajip Erdogan','Redžep Melih Mahmutoglu'], 'Redžep Tajip Erdogan', 5, 'Opste obrazovanje'),
   new Question('Reakcija između jedne baze i jedne kiseline naziva se:', ['oksidacija', 'neutralizacija','resorbcija','redukcija'], 'neutralizacija', 5, 'Opste obrazovanje'),
-  new Question('Kipar je podeljen na:', ['Grčki i Izraelski deo.', 'Turski i Kurdski de','Grčki i Turski deo.','Turski i Ruski deo.'], 'Grčki i Turski deo.', 5, 'Opste obrazovanje'),
+  new Question('Kipar je podeljen na:', ['Grčki i Izraelski deo.', 'Turski i Kurdski deo','Grčki i Turski deo.','Turski i Ruski deo.'], 'Grčki i Turski deo.', 5, 'Opste obrazovanje'),
   new Question('Koliko ima Jevanđelja u Bibliji:', ['4', '10','12','8'], '4', 5, 'Opste obrazovanje')
 ];
