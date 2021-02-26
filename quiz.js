@@ -1,6 +1,5 @@
-
-class Quiz{
-  constructor(questionsHistory, questionGeography, questionMathematics, questionTheGeneralEducation){
+class Quiz {
+  constructor(questionsHistory, questionGeography, questionMathematics, questionTheGeneralEducation) {
     this.questionsHistory = questionsHistory;
     this.questionsGeography = questionsGeography;
     this.questionsMathematics = questionsMathematics;
@@ -9,155 +8,158 @@ class Quiz{
     this.score = 0;
     this.questionNumber = 1;
   }
-  getQuestionGeography(){
+  getQuestionGeography() {
     return this.questionsGeography[this.index];
   }
-  getQuestionHistory(){
+  getQuestionHistory() {
     return this.questionsHistory[this.index];
   }
-  getQuestionMathematics(){
+  getQuestionMathematics() {
     return this.questionsMathematics[this.index];
   }
-  getQuestionTheGeneralEducation(){
+  getQuestionTheGeneralEducation() {
     return this.questionsTheGeneralEducation[this.index];
   }
-  randomizeGeography(){
+  randomizeGeography() {
     let copyArray = [].concat(this.getQuestionGeography().option);
     let rand = [];
     for (let i = 0; i < 4; i++) {
-      let r = Math.floor(Math.random()*copyArray.length);
+      let r = Math.floor(Math.random() * copyArray.length);
       rand.push(copyArray[r]);
-      copyArray.splice(r,1);
+      copyArray.splice(r, 1);
     }
     return rand
   }
-  randomizeHistory(){
+  randomizeHistory() {
     let copyArray = [].concat(this.getQuestionHistory().option);
     let rand = [];
     for (let i = 0; i < 4; i++) {
-      let r = Math.floor(Math.random()*copyArray.length);
+      let r = Math.floor(Math.random() * copyArray.length);
       rand.push(copyArray[r]);
-      copyArray.splice(r,1);
+      copyArray.splice(r, 1);
     }
     return rand
   }
-  randomizeMathematics(){
+  randomizeMathematics() {
     let copyArray = [].concat(this.getQuestionMathematics().option);
     let rand = [];
     for (let i = 0; i < 4; i++) {
-      let r = Math.floor(Math.random()*copyArray.length);
+      let r = Math.floor(Math.random() * copyArray.length);
       rand.push(copyArray[r]);
-      copyArray.splice(r,1);
+      copyArray.splice(r, 1);
     }
     return rand
   }
-  randomizeTheGeneralEducation(){
+  randomizeTheGeneralEducation() {
     let copyArray = [].concat(this.getQuestionTheGeneralEducation().option);
     let rand = [];
     for (let i = 0; i < 4; i++) {
-      let r = Math.floor(Math.random()*copyArray.length);
+      let r = Math.floor(Math.random() * copyArray.length);
       rand.push(copyArray[r]);
-      copyArray.splice(r,1);
+      copyArray.splice(r, 1);
     }
     return rand
   }
-  userAnswerGeography(answer){
-    if(answer == this.getQuestionGeography().answer){
-    this.score += this.getQuestionGeography().points;
+  userAnswerGeography(answer) {
+    if (answer == this.getQuestionGeography().answer) {
+      this.score += this.getQuestionGeography().points;
+      leftPlayerText = playerGameLeft.createPlayer();
+      playerHtml.innerHTML = leftPlayerText;
+      playerBtnText = document.querySelector('#playerBtn');
     }
     this.index++;
     this.questionNumber++;
   }
-  userAnswerHistory(answer){
-    if(answer == this.getQuestionHistory().answer){
-    this.score += this.getQuestionHistory().points;
+  userAnswerHistory(answer) {
+    if (answer == this.getQuestionHistory().answer) {
+      this.score += this.getQuestionHistory().points;
     }
     this.index++;
     this.questionNumber++;
   }
-  userAnswerMathematics(answer){
-    if(answer == this.getQuestionMathematics().answer){
-    this.score += this.getQuestionMathematics().points;
+  userAnswerMathematics(answer) {
+    if (answer == this.getQuestionMathematics().answer) {
+      this.score += this.getQuestionMathematics().points;
     }
     this.index++;
     this.questionNumber++;
   }
-  userAnswerTheGeneralEducation(answer){
-    if(answer == this.getQuestionTheGeneralEducation().answer){
-    this.score += this.getQuestionTheGeneralEducation().points;
+  userAnswerTheGeneralEducation(answer) {
+    if (answer == this.getQuestionTheGeneralEducation().answer) {
+      this.score += this.getQuestionTheGeneralEducation().points;
     }
     this.index++;
     this.questionNumber++;
   }
-  correctAnswerG(answer, thisElement){
+  correctAnswerG(answer, thisElement) {
     thisElement.classList.add('displayBorderRed');
-    if (this.questionsGeography[this.index-1].answer == answer) {
+    if (this.questionsGeography[this.index - 1].answer == answer) {
       thisElement.classList.add('displayBorderBlue');
       thisElement.classList.remove('displayBorderRed');
-        }
-    setTimeout(function (){
-    for (var i = 0; i < optionsP.length; i++) {
-      if (optionsP[i].innerHTML == quiz.questionsGeography[quiz.index-1].answer) {
-        optionsP[i].classList.add('displayBorderBlue');
-      }
     }
-  },1000)
+    setTimeout(function() {
+      for (let i = 0; i < optionsP.length; i++) {
+        if (optionsP[i].innerHTML == quiz.questionsGeography[quiz.index - 1].answer) {
+          optionsP[i].classList.add('displayBorderBlue');
+        }
+      }
+    }, 500)
     myH1.innerHTML = `Tacan odgovor je ${this.questionsGeography[this.index-1].answer}`;
   }
-  correctAnswerHistory(answer, thisElement){
+  correctAnswerHistory(answer, thisElement) {
     thisElement.classList.add('displayBorderRed');
-    if (this.questionsHistory[this.index-1].answer == answer) {
+    if (this.questionsHistory[this.index - 1].answer == answer) {
       thisElement.classList.add('displayBorderBlue');
       thisElement.classList.remove('displayBorderRed');
-      }
-      setTimeout(function (){
+    }
+    setTimeout(function() {
       for (var i = 0; i < optionsP.length; i++) {
-        if (optionsP[i].innerHTML == quiz.questionsHistory[quiz.index-1].answer) {
+        if (optionsP[i].innerHTML == quiz.questionsHistory[quiz.index - 1].answer) {
           optionsP[i].classList.add('displayBorderBlue');
         }
       }
-    },1000)
+    }, 500)
     myH1.innerHTML = `Tacan odgovor je ${this.questionsHistory[this.index-1].answer}`;
   }
-  correctAnswerMathematics(answer, thisElement){
+  correctAnswerMathematics(answer, thisElement) {
     thisElement.classList.add('displayBorderRed');
-    if (this.questionsMathematics[this.index-1].answer == answer) {
+    if (this.questionsMathematics[this.index - 1].answer == answer) {
       thisElement.classList.add('displayBorderBlue');
       thisElement.classList.remove('displayBorderRed');
-      }
-      setTimeout(function (){
+    }
+    setTimeout(function() {
       for (var i = 0; i < optionsP.length; i++) {
-        if (optionsP[i].innerHTML == quiz.questionsMathematics[quiz.index-1].answer) {
+        if (optionsP[i].innerHTML == quiz.questionsMathematics[quiz.index - 1].answer) {
           optionsP[i].classList.add('displayBorderBlue');
         }
       }
-    },1000)
+    }, 500)
     myH1.innerHTML = `Tacan odgovor je ${this.questionsMathematics[this.index-1].answer}`;
   }
-  correctAnswerTheGeneralEducation(answer, thisElement){
+  correctAnswerTheGeneralEducation(answer, thisElement) {
     thisElement.classList.add('displayBorderRed');
-    if (this.questionsTheGeneralEducation[this.index-1].answer == answer) {
+    if (this.questionsTheGeneralEducation[this.index - 1].answer == answer) {
       thisElement.classList.add('displayBorderBlue');
       thisElement.classList.remove('displayBorderRed');
-      }
-      setTimeout(function (){
+    }
+    setTimeout(function() {
       for (var i = 0; i < optionsP.length; i++) {
-        if (optionsP[i].innerHTML == quiz.questionsTheGeneralEducation[quiz.index-1].answer) {
+        if (optionsP[i].innerHTML == quiz.questionsTheGeneralEducation[quiz.index - 1].answer) {
           optionsP[i].classList.add('displayBorderBlue');
         }
       }
-    },1000)
+    }, 500)
     myH1.innerHTML = `Tacan odgovor je ${this.questionsTheGeneralEducation[this.index-1].answer}`;
   }
-  end(){
+  end() {
     if ('Geografija' == area) {
-        return this.index === this.questionsGeography.length;
-      }else if('Istorija' == area){
-        return this.index === this.questionsHistory.length;
-      }else if('Matematika' == area){
-        return this.index === this.questionsMathematics.length;
-      }else{
-        return this.index === this.questionsTheGeneralEducation.length;
+      return this.index === this.questionsGeography.length;
+    } else if ('Istorija' == area) {
+      return this.index === this.questionsHistory.length;
+    } else if ('Matematika' == area) {
+      return this.index === this.questionsMathematics.length;
+    } else {
+      return this.index === this.questionsTheGeneralEducation.length;
     }
   }
 }

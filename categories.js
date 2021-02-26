@@ -1,15 +1,15 @@
-class Category{
-  constructor(category){
+class Category {
+  constructor(category) {
     this.category = category;
   }
-  getCategory(){
+  getCategory() {
     return this.category
   }
 }
 
 const categories = [
-  new Category (`Geografija`),
-  new Category (`Istorija`),
-  new Category (`Matematika`),
-  new Category (`Opste obrazovanje`)
+  new Category(`Geografija`),
+  new Category(`Istorija`),
+  new Category(`Matematika`),
+  new Category(`Opste obrazovanje`)
 ];

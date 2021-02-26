@@ -1,5 +1,5 @@
-class Winner{
-  constructor(text){
+class Winner {
+  constructor(text) {
     this.text = text;
   }
 }
